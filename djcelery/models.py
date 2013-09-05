@@ -224,6 +224,9 @@ class PeriodicTask(models.Model):
         _('routing key'), max_length=200, blank=True, null=True, default=None,
     )
     expires = models.IntegerField(
+        _('expires, seconds'), blank=True, null=True,
+    )
+    expires_at = models.DateTimeField(
         _('expires'), blank=True, null=True,
     )
     enabled = models.BooleanField(
